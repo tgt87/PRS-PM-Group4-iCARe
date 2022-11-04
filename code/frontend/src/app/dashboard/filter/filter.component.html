@@ -1,0 +1,65 @@
+<form (ngSubmit)="onSubmit(filterForm)" #filterForm="ngForm" novalidate> 
+    <div class="form-group pad-bottom">
+        <label for="budget" class="col-form-label">Budget <span class="required-field">*</span></label>
+        <input type="number" class="form-control" id="budget" name="budget" [(ngModel)]="budgetAmt" placeholder="Enter Budget" required #budget="ngModel" min=1>
+        <small *ngIf="budget.invalid && (budget.dirty || budget.touched)" class="form-text required-field">Budget must be positive </small>
+    </div>
+    <div class="form-group pad-bottom">
+        <p for="start" class="col-form-label">Target Purchase Period</p>
+        <label for="start" class="col-form-label">Start Date <span class="required-field">*</span></label>
+        <div class="row">
+            <div class="col-md-6">
+                <select class='form-control' id="startYear" name="startYear" [(ngModel)]="startYear" [value]="startYear">
+                    <option *ngFor="let year of yearArr" [value]="year.id">{{year.description}}</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select class='form-control' id="startMonth" name="startMonth" [(ngModel)]="startMonth" [value]="startMonth">
+                    <option *ngFor="let month of monthArr" [value]="month.description">{{month.description}}</option>
+                </select>
+            </div>
+        </div>    
+    </div>    
+    <div class="form-group pad-bottom">
+        <label for="end" class="col-form-label">End Date <span class="required-field">*</span></label>
+        <div class="row">
+            <div class="col-md-6">
+                <select class='form-control' id="endYear" name="endYear" [(ngModel)]="endYear" [value]="endYear">
+                    <option *ngFor="let year of yearArr" [value]="year.id">{{year.description}}</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select class='form-control' id="endMonth" name="endMonth" [(ngModel)]="endMonth" [value]="endMonth">
+                    <option *ngFor="let month of monthArr" [value]="month.description">{{month.description}}</option>
+                </select>
+            </div>
+        </div>    
+    </div>  
+    <div class="form-group pad-bottom">
+        <label class="col-form-label">Car Brand <span class="required-field">*</span></label>
+        <div class="checkbox-container" *ngFor="let brand of brandArr">
+            <input type="checkbox" [id]="brand.id" [name]="brand.id" [(ngModel)]="brand.isSelected" (ngModelChange)="brandCheckChange($event)"/>
+            <label [for]=brand.id>{{ brand.id }}</label>
+        </div>
+        <small *ngIf="showBrandError" class="form-text required-field">
+            *Min 1 brand is required
+        </small>
+    </div>
+    <div class="form-group pad-bottom">
+        <label class="col-form-label">Car Type <span class="required-field">*</span></label>
+        <div class="checkbox-container" *ngFor="let type of typeArr">
+            <input type="checkbox" [id]="type.id" [name]="type.id" [(ngModel)]="type.isSelected" (ngModelChange)="typeCheckChange($event)"/>
+            <label [for]="type.id">{{ type.id }}</label>
+        </div>
+        <small *ngIf="showTypeError" class="form-text required-field">
+            *Min 1 type is required
+        </small>
+    </div>
+    <div class="form-group text-center">
+        <div class="align-buttons">
+            <button class="btn btn-success" type="submit" [disabled]="filterForm.invalid"> Submit </button>
+        </div> 
+    </div> 
+</form>
+    
+

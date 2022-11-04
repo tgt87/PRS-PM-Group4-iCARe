@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row full-height">
+        <div class="col-md-3 col-lg-2">
+            <div class="navbar-brand bottom-border pad-top-bottom text-center">Apply Filters</div>
+            <label for="coeCategory" class="col-form-label">COE Category</label>
+            <select class='form-control' id="coeCategory" name="coeCategory" [(ngModel)]="selectedCoeCategory" [value]="selectedCoeCategory" disabled="true">
+                <option *ngFor="let cat of coeCategoryArr" [value]="cat.id">{{cat.description}}</option>
+            </select>
+            <small class="small-font"><i>*Only category A is currently available.</i></small>
+            <app-filter (filterFormSubmitEvent)="filterFormSubmitEvent($event)"></app-filter> 
+        </div>
+        <div class="col-md-9 col-lg-10">        
+            <ng-container *ngIf="!isCoeDataLoaded">
+                <h5 class="pad-left">COE Trend:</h5>
+                <div class="text-center">
+                    <div class="spinner-border text-muted bigger-spinner"></div>
+                </div>
+            </ng-container>    
+            <div class="row" *ngIf="isCoeDataLoaded" style="height: 410px">
+                <app-coe-graph [coeResults]="coeResults"></app-coe-graph>
+            </div>
+            <ng-container *ngIf="!isCarDataLoaded">
+                <h5 class="pad-left">Recommended Cars:</h5>
+                <div class="text-center">
+                    <div class="spinner-border text-muted bigger-spinner"></div>
+                </div>
+            </ng-container>
+            <div class="row" *ngIf="isCarDataLoaded">
+                <app-car-list [cars]="cars"></app-car-list>
+            </div>
+        </div>
+    </div>
+</div>

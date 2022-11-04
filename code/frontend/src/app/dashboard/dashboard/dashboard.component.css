@@ -1,0 +1,25 @@
+.full-height {
+    height: 100vh;
+}
+
+.small-font {
+    font-size: x-small;
+}
+
+.pad-top-bottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pad-left {
+    padding-left: 12px;
+}
+
+.bottom-border {
+    border-bottom: 3px solid green;
+}
+
+.bigger-spinner {
+    width: 5rem; 
+    height: 5rem;
+}

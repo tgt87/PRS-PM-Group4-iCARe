@@ -1,0 +1,29 @@
+<div class="container">
+    <h5>Recommended Cars:</h5>
+    <p *ngIf="carsArr.length === 0">No cars matching your filter criteria found.</p>
+    <div class="row pad-bottom" *ngIf="carsArr.length > 0">
+        <p>Showing records {{startIdx + 1}} - {{endIdx}} of {{carsArr.length}}</p>
+        <div class="col-md-3" *ngFor="let car of paginatedCarArr">
+            <div class="card">
+                <img class="card-img-top" [src]="car.photo" alt="Car image" style="height:156px">
+                <div class="card-body">
+                    <h5 class="card-title">{{car.brand}} {{car.model}}</h5>
+                    <p class="card-text">Type: {{car.type}}</p>
+                    <p class="card-text">Variant: {{car.variant}}</p>
+                    <p class="card-text">Price Before COE: {{car.priceBeforeCoe | currency}}</p>
+                    <p class="card-text">Est. Price After COE: {{car.priceAfterCoe | currency}}</p>
+                    <p class="card-text">Best Bidding Exercise: {{car.bestBiddingExercise}}</p>
+                    <!-- <a href="#" class="btn btn-primary text-center">View</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="text-center pad-top-bottom" *ngIf="carsArr.length > showRecords">
+            <div class="align-buttons">
+                <button class="btn btn-secondary" type="button" [disabled]="!showPrev" (click)="showPrevClick()"> &#8249; Prev </button>
+            </div> 
+            <div class="align-buttons">
+                <button class="btn btn-primary" type="button" [disabled]="!showNext" (click)="showNextClick()"> Next &#8250; </button>
+            </div>
+        </div> 
+    </div>
+</div>

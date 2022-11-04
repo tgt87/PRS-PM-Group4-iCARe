@@ -1,0 +1,213 @@
+openapi: 3.0.3
+info:
+  title: iCARE - An Intelligent Car Budgeting Assistant
+  version: 1.0.1
+servers:
+- url: http://localhost:8080/api/v1
+tags:
+- name: coe
+- name: car
+paths:
+  /coe/prediction:
+    get:
+      tags:
+      - coe
+      summary: Get COE prediction by category
+      operationId: get_coe_prediction_by_category
+      parameters:
+      - name: category
+        in: query
+        description: Category that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          enum:
+          - A
+          - B
+          - C
+          - D
+          - E
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CategoryPrediction'
+                x-content-type: application/json
+        default:
+          description: "4xx, 5xx error response"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+      x-openapi-router-controller: swagger_server.controllers.coe_controller
+  /cars/suggest:
+    post:
+      tags:
+      - car
+      summary: Suggest cars based on user car preference
+      operationId: suggest_cars_by_user_preference
+      requestBody:
+        description: User car preference
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CarPreference'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Car'
+                x-content-type: application/json
+        default:
+          description: "4xx, 5xx error response"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+      x-openapi-router-controller: swagger_server.controllers.car_controller
+  /cars/{id}:
+    get:
+      tags:
+      - car
+      summary: Get car by Id
+      operationId: get_car_by_id
+      parameters:
+      - name: id
+        in: path
+        description: Id of car to retrieve
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+        default:
+          description: "4xx, 5xx error response"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+      x-openapi-router-controller: swagger_server.controllers.car_controller
+components:
+  schemas:
+    CategoryPrediction:
+      required:
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+          enum:
+          - Category A
+          - Category B
+          - Category C
+          - Category D
+          - Category E
+        series:
+          type: array
+          items:
+            $ref: '#/components/schemas/Predictions'
+      example:
+        series:
+        - min: 6.02745618307040320615897144307382404804229736328125
+          max: 1.46581298050294517310021547018550336360931396484375
+          name: name
+          value: 0.80082819046101150206595775671303272247314453125
+        - min: 6.02745618307040320615897144307382404804229736328125
+          max: 1.46581298050294517310021547018550336360931396484375
+          name: name
+          value: 0.80082819046101150206595775671303272247314453125
+        name: Category A
+    Predictions:
+      type: object
+      properties:
+        name:
+          type: string
+        value:
+          type: number
+        min:
+          type: number
+        max:
+          type: number
+      example:
+        min: 6.02745618307040320615897144307382404804229736328125
+        max: 1.46581298050294517310021547018550336360931396484375
+        name: name
+        value: 0.80082819046101150206595775671303272247314453125
+    Car:
+      type: object
+      properties:
+        id:
+          type: integer
+        brand:
+          type: string
+        model:
+          type: string
+        variant:
+          type: string
+        type:
+          type: string
+        priceBeforeCoe:
+          type: number
+        priceAfterCoe:
+          type: number
+        bestBiddingExercise:
+          type: string
+        photo:
+          type: string
+      example:
+        bestBiddingExercise: bestBiddingExercise
+        priceAfterCoe: 1.46581298050294517310021547018550336360931396484375
+        variant: variant
+        photo: photo
+        model: model
+        id: 0
+        type: type
+        brand: brand
+        priceBeforeCoe: 6.02745618307040320615897144307382404804229736328125
+    CarPreference:
+      type: object
+      properties:
+        startYear:
+          type: string
+        startMonth:
+          type: string
+        endYear:
+          type: string
+        endMonth:
+          type: string
+        brand:
+          type: array
+          items:
+            type: string
+        type:
+          type: array
+          items:
+            type: string
+        budget:
+          type: number
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+

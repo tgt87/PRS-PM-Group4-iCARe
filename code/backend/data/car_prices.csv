@@ -1,0 +1,36 @@
+﻿id,brand,model,variant,type,price,photo,source
+1,Honda,Jazz,Base 1.5L,Hatchback,62000,https://www.honda.com.sg/images/cars/All-New_Jazz_YM_2021/All-New_Jazz_Loan_Calculator_Base_-_615x396px.jpg,https://www.honda.com.sg/new-cars/hatchback/all-new-jazz.html
+2,Honda,Jazz,Home 1.5L,Hatchback,64000,https://www.honda.com.sg/images/cars/All-New_Jazz_YM_2021/All-New_Jazz_Loan_Calculator_Base_-_615x396px.jpg,https://www.honda.com.sg/new-cars/hatchback/all-new-jazz.html
+3,Honda,Jazz HEV,H-Luxe Hybrid,Hatchback,66000,https://www.honda.com.sg/images/cars/All-New_Jazz_YM_2021/All-New_Jazz_Loan_Calculator_Base_-_615x396px.jpg,https://www.honda.com.sg/new-cars/hatchback/all-new-jazz.html
+4,Honda,City,SV 1.5L,Sedan,64000,https://carnetwork.s3.ap-southeast-1.amazonaws.com/file/21e6041efacc4d80bb247a8944601fa3.jpg,https://www.wapcar.my/cars/honda/city
+5,Honda,City,RS 1.5L,Sedan,65000,https://carnetwork.s3.ap-southeast-1.amazonaws.com/file/21e6041efacc4d80bb247a8944601fa3.jpg,https://www.wapcar.my/cars/honda/city
+6,Honda,Civic,1.5L,Sedan,82000,https://www.honda.com.sg/images/cars/2021_All-New_Civic/Colours/Morning_Mist_Blue.png,https://www.honda.com.sg/new-cars/sedan/all-new-civic.html
+7,Honda,Freed,S7 1.5L,MPV,69000,https://www.honda.com.sg/images/cars/2022_All_New_Freed/Colours/Freed-E7-high-res---platinum-white.jpg,https://www.honda.com.sg/new-cars/suv-mpv/all-new-freed.html
+8,Honda,Freed,E7 1.5L,MPV,74000,https://www.honda.com.sg/images/cars/2022_All_New_Freed/Colours/Freed-E7-high-res---platinum-white.jpg,https://www.honda.com.sg/new-cars/suv-mpv/all-new-freed.html
+9,Honda,HR-V,DX 1.5L,SUV,70000,https://www.honda.com.sg/images/cars/All-New_HRV_2021/Colours/Opal-White-v3.jpg,https://www.honda.com.sg/new-cars/suv-mpv/all-new-hrv.html
+10,Honda,HR-V,DX+ 1.5L,SUV,73000,https://www.honda.com.sg/images/cars/All-New_HRV_2021/Colours/Opal-White-v3.jpg,https://www.honda.com.sg/new-cars/suv-mpv/all-new-hrv.html
+11,Kia,Cerato,EX 1.6L,Sedan,50000,https://www.cyclecarriage.com/sg/-/media/jccl/images/kia-models/cerato/cerato-blue-1680x760.png,https://www.cyclecarriage.com/sg/kia/cerato
+12,Kia,Cerato,GT Line 1.6L,Sedan,57000,https://www.cyclecarriage.com/sg/-/media/jccl/images/kia-models/cerato/cerato-blue-1680x760.png,https://www.cyclecarriage.com/sg/kia/cerato
+13,Kia,Stonic,M-Hybrid EX 1.0T,SUV,50000,https://www.cyclecarriage.com/sg/-/media/jccl/images/kia-models/stonic/360/kia-stonic-red-1406x872.png,https://www.cyclecarriage.com/sg/kia/stonic
+14,Kia,Stonic,M-Hybrid SX 1.0T,SUV,54000,https://www.cyclecarriage.com/sg/-/media/jccl/images/kia-models/stonic/360/kia-stonic-red-1406x872.png,https://www.cyclecarriage.com/sg/kia/stonic
+15,Kia,Sonet,SX 1.5,SUV,61000,https://www.cyclecarriage.com/sg/-/media/jccl/images/kia-models/sonet/colours/sonet-steelgrey-1406x872.png,https://www.cyclecarriage.com/sg/kia/sonet
+16,Mazda,2,1.5L Classic,Hatchback,47000,https://www.eurokarsgroup.com/wp-content/uploads/2018/04/Mazda-2-1.5L-Sedan-2.jpg,https://www.eurokarsgroup.com/leasing/mazda-2-1-5l-sedan-2/
+17,Mazda,2,1.5L Elegance,Hatchback,52000,https://www.eurokarsgroup.com/wp-content/uploads/2018/04/Mazda-2-1.5L-Sedan-2.jpg,https://www.eurokarsgroup.com/leasing/mazda-2-1-5l-sedan-2/
+18,Mazda,3,1.5L Classic,Sedan,64000,https://www.mazdausa.com/siteassets/vehicles/2023/m3h/07_trims/34-profiles/select/2022-m3h-select-platinium-quartz.png,https://www.ccarprice.com/sg/mazda-3-2-5-turbo-2021-price-in-singapore-6071
+19,Mazda,3,1.5L Elegance,Sedan,68000,https://www.mazdausa.com/siteassets/vehicles/2023/m3h/07_trims/34-profiles/select/2022-m3h-select-platinium-quartz.png,https://www.ccarprice.com/sg/mazda-3-2-5-turbo-2021-price-in-singapore-6071
+20,Mazda,3,1.5L Astina,Sedan,72000,https://www.mazdausa.com/siteassets/vehicles/2023/m3h/07_trims/34-profiles/select/2022-m3h-select-platinium-quartz.png,https://www.ccarprice.com/sg/mazda-3-2-5-turbo-2021-price-in-singapore-6071
+21,Toyota,Vios,1.5 E Grade,Sedan,52000,https://www.toyota.com.sg/-/media/d4bebfd3c9604c91b8105de298a9c6d9.png,https://www.toyota.com.sg/showroom/new-models/vios
+22,Toyota,Vios,1.5 G Grade,Sedan,58000,https://www.toyota.com.sg/-/media/d4bebfd3c9604c91b8105de298a9c6d9.png,https://www.toyota.com.sg/showroom/new-models/vios
+23,Toyota,Corolla Altis,1.6 Standard,Sedan,63000,https://www.toyota.com.sg/showroom/new-models/-/media/d79c3977c52944b0b30e6491bd3309b1.png,https://www.toyota.com.sg/showroom/new-models/corolla-altis
+24,Toyota,Corolla Altis,1.6 Elegance,Sedan,70000,https://www.toyota.com.sg/showroom/new-models/-/media/d79c3977c52944b0b30e6491bd3309b1.png,https://www.toyota.com.sg/showroom/new-models/corolla-altis
+25,Toyota,Yaris Cross,1.5 Active Hybrid,SUV,70000,https://www.toyota.com.sg/showroom/new-models/-/media/c9776ff70e3b4c7699f13f6112f9be46.png,https://www.toyota.com.sg/showroom/new-models/yaris-cross
+26,Toyota,Yaris Cross,1.5 Excite Hybrid,SUV,75000,https://www.toyota.com.sg/showroom/new-models/-/media/c9776ff70e3b4c7699f13f6112f9be46.png,https://www.toyota.com.sg/showroom/new-models/yaris-cross
+27,Toyota,Sienta,1.5 Elegance Hybrid,MPV,71000,https://www.toyota.com.sg/-/media/f7325797200b4bec9fb4a7a9cd34ebcd.png,https://global.toyota/en/newsroom/toyota/37542220.html
+28,Hyundai,Avante,1.6 Auto,Sedan,59000,https://hyundai.com.sg/_nuxt/image/d41eb5.png,https://hyundai.com.sg/vehicles/avante/
+29,Hyundai,Avante,1.6 S,Sedan,64000,https://hyundai.com.sg/_nuxt/image/d41eb5.png,https://hyundai.com.sg/vehicles/avante/
+30,Hyundai,Avante,1.6 Elite Sunroof,Sedan,69000,https://hyundai.com.sg/_nuxt/image/d41eb5.png,https://hyundai.com.sg/vehicles/avante/
+31,Hyundai,IONIQ Hybrid,1.6,SUV,77000,https://i.i-sgcm.com/new_cars/cars/11898/11898_m.jpg,https://www.sgcarmart.com/new_cars/newcars_overview.php?CarCode=11898
+32,Hyundai,IONIQ Hybrid,1.6 Sunroof,SUV,83000,https://i.i-sgcm.com/new_cars/cars/11898/11898_m.jpg,https://www.sgcarmart.com/new_cars/newcars_overview.php?CarCode=11898
+33,Hyundai,KONA Hybrid,1.6,SUV,82000,https://imgcdn.oto.com.sg/large/gallery/color/4/285/hyundai-kona-hybrid-color-103286.jpg,https://hyundai.com.sg/vehicles/kona-hybrid/
+34,Hyundai,KONA Hybrid,1.6 Sunroof,SUV,90000,https://imgcdn.oto.com.sg/large/gallery/color/4/285/hyundai-kona-hybrid-color-103286.jpg,https://hyundai.com.sg/vehicles/kona-hybrid/
+35,Hyundai,TUCSON Hybrid,1.6 Turbo,SUV,121000,https://hyundai.com.sg/_nuxt/image/c41466.png,https://hyundai.com.sg/vehicles/tucson/

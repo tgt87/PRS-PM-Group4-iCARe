@@ -1,0 +1,12 @@
+.pad-bottom {
+    padding-bottom: 10px;
+}
+.pad-top-bottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.align-buttons {
+    padding-right: 20px;
+    display: inline-block;
+}

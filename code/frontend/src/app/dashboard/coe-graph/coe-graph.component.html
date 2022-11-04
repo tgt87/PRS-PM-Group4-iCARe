@@ -1,0 +1,33 @@
+<div class="container">
+    <h5>COE Trend:</h5>
+    <div class="pad-top">
+        <div class="chart-area">
+            <ngx-charts-line-chart
+                legendTitle="COE Category"
+                [legendPosition]="options.legendPosition"
+                [legend]="options.legend"
+                [showXAxisLabel]="options.showXAxisLabel"
+                [showYAxisLabel]="options.showYAxisLabel"
+                [showGridLines]="options.showGridLines"
+                [xAxis]="options.xAxis"
+                [yAxis]="options.yAxis"
+                [xAxisLabel]="options.xAxisLabel"
+                [yAxisLabel]="options.yAxisLabel"
+                [timeline]="options.timeline"
+                [results]="coeResults"
+                (select)="onSelect($event)"
+                >
+                <ng-template #tooltipTemplate let-model="model">
+                    <div>{{model.series}} &#183; {{model.name}}</div>
+                    <h6>{{model.value | number:'5.0-2'}} <span *ngIf="model.min !== model.max">({{model.min | number:'5.0-2'}} - {{model.max | number:'5.0-2'}})</span></h6>
+                    <!-- <pre>{{model|json}}</pre> -->
+                </ng-template>
+                <ng-template #seriesTooltipTemplate let-model="model">
+                    <div>{{model[0].series}} &#183; {{model[0].name}}</div>
+                    <h6>{{model[0].value | number:'5.0-2'}} <span *ngIf="model[0].min !== model[0].max">({{model[0].min | number:'5.0-2'}} - {{model[0].max | number:'5.0-2'}})</span></h6>
+                    <!-- <pre>{{model|json}}</pre> -->
+                </ng-template>
+            </ngx-charts-line-chart>
+        </div>
+    </div>
+</div>    
