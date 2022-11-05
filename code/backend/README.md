@@ -6,6 +6,7 @@ Python 3.5.2+
 For Windows:
 1. Create and activate venv by executing the following from the root directory: 
 ```
+cd code\backend
 python -m venv venv
 venv\scripts\activate
 ```
@@ -19,6 +20,7 @@ python -m swagger_server
 For Ubuntu:
 1. Create and activate venv by executing the following from the root directory: 
 ```
+cd code/backend
 python -m venv venv
 venv/scripts/activate
 ```
