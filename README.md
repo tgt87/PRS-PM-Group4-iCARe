@@ -1,6 +1,6 @@
 # PRS-PM-Group4-iCARe
 This repository contains project deliverables for ISY5002 Graduate Certificate in Pattern Recognition Systems Practice Module
-Github link: https://github.com/tgt87/PRS-PM-Group4-iCARe
+- Github link: https://github.com/tgt87/PRS-PM-Group4-iCARe
 
 ## Project Title
 iCARe – An Intelligent Car Budgeting Assistant 
